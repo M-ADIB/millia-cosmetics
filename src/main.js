@@ -2,6 +2,34 @@ import { getProducts, allProducts } from './products.js';
 import { calculateQuote } from './configurator.js';
 import './style.css';
 
+/* ═══ SHADE COLOR MAPS ═══ */
+const SHADE_COLORS = {
+  // Foundations
+  '01 Porcelain': '#FAF0E6',
+  '02 Ivory': '#F5E1D3',
+  '03 Sand': '#E6C2A0',
+  '04 Beige': '#DDB088',
+  '05 Honey': '#C69063',
+  '06 Bronze': '#A26F46',
+  '07 Chestnut': '#7D4F2A',
+  // Lipsticks
+  'Velvet Nude': '#C48B71',
+  'Desert Rose': '#A55B5C',
+  'Crimson Passion': '#B11B1B',
+  'Coral Crush': '#E56D60',
+  'Satin Plum': '#6B3B48',
+  'Berry Glaze': '#872B3F',
+  // Blushes
+  'Peach Glow': '#FCAE96',
+  'Rosy Bloom': '#E58A8A',
+  'Warm Amber': '#D38363',
+  'Soft Coral': '#EC887B',
+  // Highlighters
+  'Champagne Dew': '#F3E5AB',
+  'Rose Gold Spark': '#B76E79',
+  'Bronze Goddess': '#CD7F32'
+};
+
 /* ═══ INITIAL APP STATES ═══ */
 let cart = JSON.parse(localStorage.getItem('millia_cart')) || [];
 let activePromoCode = localStorage.getItem('millia_promo') || '';
@@ -662,10 +690,10 @@ function openQuickView(productId) {
         <div class="qv-variants">
           ${product.shades.length > 0 ? `
             <div class="qv-variant-group">
-              <h4>Select Shade</h4>
+              <h4>Select Shade: <span id="qvSelectedShadeLabel" style="font-weight:600; color:var(--black);">${activeShade}</span></h4>
               <div class="swatch-list" id="qvShadesList">
                 ${product.shades.map(s => `
-                  <button class="swatch-btn ${s === activeShade ? 'active' : ''}" data-val="${s}">${s}</button>
+                  <button class="swatch-btn--color ${s === activeShade ? 'active' : ''}" data-val="${s}" style="background-color: ${SHADE_COLORS[s] || '#ccc'}" data-tooltip="${s}" aria-label="${s}"></button>
                 `).join('')}
               </div>
             </div>
@@ -673,10 +701,10 @@ function openQuickView(productId) {
 
           ${product.sizes.length > 0 ? `
             <div class="qv-variant-group">
-              <h4>Select Volume</h4>
+              <h4>Select Volume: <span id="qvSelectedSizeLabel" style="font-weight:600; color:var(--black);">${activeSize}</span></h4>
               <div class="swatch-list" id="qvSizesList">
                 ${product.sizes.map(s => `
-                  <button class="swatch-btn ${s === activeSize ? 'active' : ''}" data-val="${s}">${s}</button>
+                  <button class="swatch-btn--size ${s === activeSize ? 'active' : ''}" data-val="${s}">${s}</button>
                 `).join('')}
               </div>
             </div>
@@ -721,7 +749,7 @@ function openQuickView(productId) {
     // Listeners inside modal content
     const shadesWrap = document.getElementById('qvShadesList');
     if (shadesWrap) {
-      shadesWrap.querySelectorAll('.swatch-btn').forEach(btn => {
+      shadesWrap.querySelectorAll('.swatch-btn--color').forEach(btn => {
         btn.addEventListener('click', () => {
           activeShade = btn.getAttribute('data-val');
           renderModalInner();
@@ -731,7 +759,7 @@ function openQuickView(productId) {
 
     const sizesWrap = document.getElementById('qvSizesList');
     if (sizesWrap) {
-      sizesWrap.querySelectorAll('.swatch-btn').forEach(btn => {
+      sizesWrap.querySelectorAll('.swatch-btn--size').forEach(btn => {
         btn.addEventListener('click', () => {
           activeSize = btn.getAttribute('data-val');
           renderModalInner();

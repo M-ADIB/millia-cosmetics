@@ -17,8 +17,10 @@
   --black: #16120E;
   
   /* Typography */
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-header: 'Outfit', sans-serif;
+  
   
   /* Layout tokens */
   --container: 1200px;
@@ -113,7 +115,8 @@ em {
 .section__title {
   font-family: var(--font-serif);
   font-size: clamp(2.2rem, 5vw, 3.2rem);
-  font-weight: 500;
+  font-weight: 800;
+  letter-spacing: -0.5px;
   line-height: 1.15;
   margin-bottom: 20px;
   color: var(--black);
@@ -157,10 +160,10 @@ em {
   gap: 10px;
   padding: 14px 34px;
   border-radius: var(--radius-full);
-  font-family: var(--font-sans);
+  font-family: var(--font-header);
   font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  font-weight: 700;
+  letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
   border: 1.5px solid transparent;
@@ -227,13 +230,13 @@ em {
 }
 
 .header__logo img {
-  height: 40px;
+  height: 56px;
   width: auto;
   transition: var(--transition);
 }
 
 .header--scrolled .header__logo img {
-  height: 32px;
+  height: 46px;
 }
 
 .header__nav {
@@ -247,9 +250,10 @@ em {
 }
 
 .nav-link {
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+  font-family: var(--font-header);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--gray-700);
   transition: var(--transition);
@@ -394,7 +398,8 @@ em {
 .hero__title {
   font-family: var(--font-serif);
   font-size: clamp(2.6rem, 5.5vw, 4.4rem);
-  font-weight: 400;
+  font-weight: 800;
+  letter-spacing: -1px;
   line-height: 1.1;
   margin-bottom: 24px;
   color: var(--black);
@@ -1823,7 +1828,7 @@ em {
 }
 
 .footer__logo {
-  height: 36px;
+  height: 52px;
   width: auto;
   filter: brightness(10);
   margin-bottom: 20px;
@@ -2409,18 +2414,59 @@ em {
   flex-wrap: wrap;
 }
 
-.swatch-btn {
-  background: var(--off-white);
-  border: 1px solid var(--gray-300);
-  padding: 6px 16px;
-  border-radius: var(--radius-full);
-  font-size: 0.75rem;
-  font-weight: 500;
+.swatch-btn--color {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  padding: 0;
+  border: 2px solid var(--white);
+  box-shadow: 0 0 0 1px var(--gray-300);
+  position: relative;
   cursor: pointer;
   transition: var(--transition-fast);
 }
+.swatch-btn--color:hover {
+  transform: scale(1.1);
+}
+.swatch-btn--color.active {
+  box-shadow: 0 0 0 2px var(--primary);
+}
+.swatch-btn--color::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--black);
+  color: var(--white);
+  font-size: 0.65rem;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-fast);
+  pointer-events: none;
+  z-index: 10;
+}
+.swatch-btn--color:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
 
-.swatch-btn:hover, .swatch-btn.active {
+.swatch-btn--size {
+  background: var(--white);
+  border: 1.5px solid var(--gray-300);
+  padding: 8px 20px;
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+.swatch-btn--size:hover, .swatch-btn--size.active {
   border-color: var(--primary);
   color: var(--primary);
   background: var(--primary-bg);
