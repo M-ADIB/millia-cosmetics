@@ -129,12 +129,52 @@ function initRouter() {
 /* ═══ NAVBAR & GENERAL LAYOUT ═══ */
 function initHeaderScroll() {
   const header = document.getElementById('header');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      header.classList.add('header--scrolled');
-    } else {
-      header.classList.remove('header--scrolled');
-    }
+  const onScroll = () => {
+    const scrolled = window.scrollY > 40;
+    header.classList.toggle('header--scrolled', scrolled);
+    // Drives the announcement bar collapse + header docking to the top
+    document.body.classList.toggle('is-scrolled', scrolled);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+}
+
+/* ═══ SCROLL REVEAL (progressive enhancement) ═══ */
+function initScrollReveal() {
+  // Bail safely on older browsers — content stays fully visible
+  if (typeof IntersectionObserver === 'undefined') return;
+
+  const selectors = [
+    '#view-home .hero__content',
+    '#view-home .hero__visual',
+    '#view-home .section__header',
+    '#view-home .routine__media',
+    '#view-home .routine__content',
+    '#view-home .wl-callout__content',
+    '#view-home .wl-callout__image-wrap',
+    '.benefits-banner .benefit-item',
+    '.testimonials .section__header',
+    '.contact__info',
+    '.contact__form'
+  ];
+
+  const targets = document.querySelectorAll(selectors.join(','));
+  if (!targets.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+  targets.forEach((el, i) => {
+    // Hidden state is only applied when JS + observer are active
+    el.classList.add('reveal');
+    el.style.transitionDelay = `${Math.min(i % 4, 3) * 0.08}s`;
+    observer.observe(el);
   });
 }
 
@@ -1221,6 +1261,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeaderScroll();
   initBurgerMenu();
   initRouter();
+  initScrollReveal();
   
   // E-commerce & Search features
   initCatalogFilters();
