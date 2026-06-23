@@ -50,12 +50,23 @@ const filterState = {
 
 // UAE Branches Data
 const branches = [
-  { name: 'Sharjah Flagship Store', emirate: 'Sharjah', address: 'Al Qasimia St, Industrial Area 4, Sharjah', hours: '9:00 AM - 10:00 PM', phone: '+971 6 567 1111' },
-  { name: 'Sharjah City Centre', emirate: 'Sharjah', address: 'Al Wahda Road, Sharjah', hours: '10:00 AM - 10:00 PM', phone: '+971 6 533 2222' },
+  // Sharjah (4)
+  { name: 'Sharjah Flagship Boutique', emirate: 'Sharjah', address: 'Al Qasimia St, Industrial Area 4, Sharjah', hours: '9:00 AM - 10:00 PM', phone: '+971 6 567 1111' },
+  { name: 'Sharjah City Centre', emirate: 'Sharjah', address: 'Ground Floor, Al Wahda Road, Sharjah', hours: '10:00 AM - 10:00 PM', phone: '+971 6 533 2222' },
+  { name: 'Mega Mall Sharjah', emirate: 'Sharjah', address: 'Level 2, Abu Shagara, Sharjah', hours: '10:00 AM - 10:00 PM', phone: '+971 6 574 3333' },
+  { name: 'Al Majaz Waterfront Store', emirate: 'Sharjah', address: 'Al Majaz Waterfront, Corniche St, Sharjah', hours: '10:00 AM - 11:00 PM', phone: '+971 6 556 4444' },
+  // Dubai (4)
   { name: 'Dubai Mall Boutique', emirate: 'Dubai', address: 'Ground Floor, Near Fashion Avenue, Dubai Mall', hours: '10:00 AM - 12:00 AM', phone: '+971 4 339 3333' },
-  { name: 'Abu Dhabi Mall Branch', emirate: 'Abu Dhabi', address: 'First Level, Abu Dhabi Mall, Tourist Club Area', hours: '10:00 AM - 10:00 PM', phone: '+971 2 645 4444' },
+  { name: 'Mall of the Emirates Branch', emirate: 'Dubai', address: 'First Level, Near Ski Dubai, Sheikh Zayed Road', hours: '10:00 AM - 11:00 PM', phone: '+971 4 341 5555' },
+  { name: 'City Centre Mirdif Boutique', emirate: 'Dubai', address: 'Ground Level, Sheikh Mohammed Bin Zayed Road', hours: '10:00 AM - 10:00 PM', phone: '+971 4 284 6666' },
+  { name: 'Dubai Marina Mall Store', emirate: 'Dubai', address: 'Level 1, Dubai Marina Mall, Dubai Marina', hours: '10:00 AM - 11:00 PM', phone: '+971 4 436 7777' },
+  // Abu Dhabi (2)
+  { name: 'Abu Dhabi Mall Boutique', emirate: 'Abu Dhabi', address: 'First Level, Abu Dhabi Mall, Tourist Club Area', hours: '10:00 AM - 10:00 PM', phone: '+971 2 645 4444' },
+  { name: 'Yas Mall Flagship', emirate: 'Abu Dhabi', address: 'Ground Floor, Yas Island, Abu Dhabi', hours: '10:00 AM - 10:00 PM', phone: '+971 2 565 8888' },
+  // Other Emirates (3)
   { name: 'Ajman City Centre', emirate: 'Ajman', address: 'Al Jurf, Ajman', hours: '10:00 AM - 10:00 PM', phone: '+971 6 743 5555' },
-  { name: 'Fujairah Century Mall', emirate: 'Fujairah', address: 'Al Qasr Road, Fujairah', hours: '10:00 AM - 10:00 PM', phone: '+971 9 223 6666' }
+  { name: 'Fujairah Century Mall', emirate: 'Fujairah', address: 'Al Qasr Road, Fujairah', hours: '10:00 AM - 10:00 PM', phone: '+971 9 223 6666' },
+  { name: 'Al Manar Mall Branch', emirate: 'Ras Al Khaimah', address: 'Al Muntasir Road, Ras Al Khaimah', hours: '10:00 AM - 10:00 PM', phone: '+971 7 227 9999' }
 ];
 
 // Testimonials Data
