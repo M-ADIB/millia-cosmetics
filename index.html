@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Millia Cosmetics — Luxury Beauty & White-Label Manufacturing</title>
+  <meta name="description" content="UAE's premium cosmetic brand since 1997. Shop 100+ luxury beauty products or launch your own cosmetic brand with our state-of-the-art white-label manufacturing." />
+  <link rel="icon" type="image/webp" href="/millia-logo.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <!-- ═══ HEADER & NAVIGATION ═══ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <!-- Logo -->
+      <a href="#home" class="header__logo">
+        <img src="/millia-logo.webp" alt="Millia Cosmetics" />
+      </a>
+      
+      <!-- Desktop Navigation links -->
+      <nav class="header__nav" id="headerNav">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#shop" class="nav-link">Shop Catalog</a></li>
+          <li><a href="#whitelabel" class="nav-link">White Label</a></li>
+          <li><a href="#about" class="nav-link">Our Story</a></li>
+          <li><a href="#branches" class="nav-link">Branches</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header actions (Search, Cart, Burger menu) -->
+      <div class="header__actions">
+        <button class="action-btn" id="searchToggle" aria-label="Open search">
+          <span class="icon">🔍</span>
+        </button>
+        <button class="action-btn cart-toggle-btn" id="cartToggle" aria-label="Open shopping cart">
+          <span class="icon">🛒</span>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+        <a href="#whitelabel" class="btn btn--primary btn--sm header-cta">Launch Brand</a>
+        <button class="nav-burger" id="navBurger" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ MAIN CONTENT CONTAINER (SPA VIEWS) ═══ -->
+  <main id="mainContent">
+
+    <!-- 📍 VIEW 1: HOME PAGE -->
+    <div id="view-home" class="spa-view active">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <span class="hero__badge">Trusted Since 1997</span>
+            <h1 class="hero__title">
+              Timeless Beauty,<br/>
+              <em>Crafted</em> in the UAE
+            </h1>
+            <p class="hero__subtitle">Discover our premium range of skincare, makeup, and fragrances, or launch your own cosmetic brand with our state-of-the-art white-label manufacturing facility.</p>
+            <div class="hero__ctas">
+              <a href="#shop" class="btn btn--primary">Explore Catalog</a>
+              <a href="#whitelabel" class="btn btn--outline">White-Label Partner</a>
+            </div>
+            <div class="hero__proof">
+              <div class="hero__avatars">
+                <div class="avatar" style="background:linear-gradient(135deg,#E87B1D,#f4a261)"></div>
+                <div class="avatar" style="background:linear-gradient(135deg,#d4a373,#E87B1D)"></div>
+                <div class="avatar" style="background:linear-gradient(135deg,#f4a261,#e9c46a)"></div>
+              </div>
+              <div class="hero__proof-text">
+                <div class="hero__stars">★★★★★</div>
+                <span>Over 28 Years of Cosmetics Excellence</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero__visual">
+            <div class="hero__image-wrapper">
+              <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&q=80" alt="Premium cosmetics collection" class="hero__image" />
+              <div class="hero__floating-card hero__floating-card--1">
+                <span class="floating-icon">✦</span>
+                <div>
+                  <strong>UAE Factory</strong>
+                  <small>Est. April 1997</small>
+                </div>
+              </div>
+              <div class="hero__floating-card hero__floating-card--2">
+                <span class="floating-icon">◈</span>
+                <div>
+                  <strong>6 Branches</strong>
+                  <small>Across Dubai & Sharjah</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Marquee -->
+      <div class="marquee">
+        <div class="marquee__track">
+          <span>Premium Skincare</span><span class="marquee__dot">◆</span>
+          <span>White-Label Manufacturing</span><span class="marquee__dot">◆</span>
+          <span>6 Branches Across UAE</span><span class="marquee__dot">◆</span>
+          <span>100% Authentic Quality</span><span class="marquee__dot">◆</span>
+          <span>Cruelty-Free Products</span><span class="marquee__dot">◆</span>
+          <span>Premium Skincare</span><span class="marquee__dot">◆</span>
+          <span>White-Label Manufacturing</span><span class="marquee__dot">◆</span>
+          <span>6 Branches Across UAE</span><span class="marquee__dot">◆</span>
+          <span>100% Authentic Quality</span><span class="marquee__dot">◆</span>
+          <span>Cruelty-Free Products</span><span class="marquee__dot">◆</span>
+        </div>
+      </div>
+
+      <!-- Featured Collections -->
+      <section class="featured section">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__label">Curated Selection</span>
+            <h2 class="section__title">Our <em>Best Sellers</em></h2>
+            <p class="section__desc">Experience the finest formulations loved by thousands across the region.</p>
+          </div>
+          <div class="products-grid" id="homeFeaturedGrid">
+            <!-- Injected by JS -->
+          </div>
+          <div class="section__cta">
+            <a href="#shop" class="btn btn--primary">View All 100 Products</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Routine Video Section -->
+      <section class="routine section">
+        <div class="container routine__inner">
+          <div class="routine__media">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=700&q=80" alt="Daily beauty routine" class="routine__img" />
+            <button class="routine__play" aria-label="Play video">▶</button>
+          </div>
+          <div class="routine__content">
+            <span class="section__label">Daily Rituals</span>
+            <h2 class="section__title">Clean Formulas for<br/><em>Radiant Results</em></h2>
+            <p>Every Millia product is crafted to fit seamlessly into your skincare and beauty routine, providing scientifically proven results with premium, safe ingredients.</p>
+            <div class="routine__stats">
+              <div class="routine__stat">
+                <span class="routine__stat-num">98%</span>
+                <span>Customer Satisfaction</span>
+              </div>
+              <div class="routine__stat">
+                <span class="routine__stat-num">100%</span>
+                <span>Cruelty-Free & Ethical</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- White Label Home Callout -->
+      <section class="wl-callout section">
+        <div class="container wl-callout__inner">
+          <div class="wl-callout__content">
+            <span class="section__label">For Aspiring Brands</span>
+            <h2 class="section__title">Build Your Own Cosmetic Line</h2>
+            <p>We are a leading white-label cosmetics manufacturer in the UAE. From formula creation to packaging sourcing, we handle it all in our state-of-the-art facility.</p>
+            <a href="#whitelabel" class="btn btn--primary">Try Quote Configurator</a>
+          </div>
+          <div class="wl-callout__image-wrap">
+            <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=700&q=80" alt="Cosmetic formulation laboratory" />
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+    <!-- 🛍️ VIEW 2: SHOP CATALOG PAGE -->
+    <div id="view-shop" class="spa-view">
+      <section class="shop-catalog section">
+        <div class="container">
+          <div class="shop-layout">
+            
+            <!-- Filters Sidebar -->
+            <aside class="shop-sidebar" id="shopSidebar">
+              <div class="sidebar__header">
+                <h3>Filters</h3>
+                <button class="sidebar-close-btn" id="sidebarClose" aria-label="Close filters">✕</button>
+              </div>
+              
+              <!-- Search inside sidebar -->
+              <div class="filter-group">
+                <label for="sidebarSearch">Search Catalog</label>
+                <div class="search-input-wrap">
+                  <input type="text" id="sidebarSearch" placeholder="Search products..." />
+                  <span class="search-clear" id="sidebarSearchClear">✕</span>
+                </div>
+              </div>
+
+              <!-- Categories Filter -->
+              <div class="filter-group">
+                <h4>Categories</h4>
+                <ul class="filter-options" id="categoryFilterOptions">
+                  <li><button class="filter-opt active" data-category="All">All Categories</button></li>
+                  <li><button class="filter-opt" data-category="Skincare">Skincare</button></li>
+                  <li><button class="filter-opt" data-category="Makeup">Makeup</button></li>
+                  <li><button class="filter-opt" data-category="Haircare">Haircare</button></li>
+                  <li><button class="filter-opt" data-category="Fragrance">Fragrance</button></li>
+                  <li><button class="filter-opt" data-category="Body Care">Body Care</button></li>
+                </ul>
+              </div>
+
+              <!-- Price Filter -->
+              <div class="filter-group">
+                <h4>Price Range (AED)</h4>
+                <div class="price-slider-wrap">
+                  <input type="range" id="priceRange" min="50" max="500" value="500" step="10" />
+                  <div class="price-labels">
+                    <span>AED 50</span>
+                    <span id="priceRangeLabel">Max: AED 500</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Badges/Tags Filter -->
+              <div class="filter-group">
+                <h4>Product Status</h4>
+                <label class="filter-checkbox">
+                  <input type="checkbox" value="bestseller" class="status-filter-check" />
+                  <span>Best Sellers</span>
+                </label>
+                <label class="filter-checkbox">
+                  <input type="checkbox" value="new" class="status-filter-check" />
+                  <span>New Arrivals</span>
+                </label>
+                <label class="filter-checkbox">
+                  <input type="checkbox" value="instock" class="status-filter-check" />
+                  <span>In Stock Only</span>
+                </label>
+              </div>
+
+              <!-- Clear button -->
+              <button class="btn btn--outline btn--sm btn--full" id="clearFiltersBtn">Clear All Filters</button>
+            </aside>
+
+            <!-- Products Content Area -->
+            <div class="shop-content">
+              
+              <!-- Toolbar -->
+              <div class="shop-toolbar">
+                <div class="toolbar__left">
+                  <button class="btn btn--outline btn--sm filter-toggle-mobile" id="mobileFilterToggle">
+                    <span>⚙</span> Filters
+                  </button>
+                  <p class="products-count" id="productsCountText">Showing 0 products</p>
+                </div>
+                <div class="toolbar__right">
+                  <label for="sortBySelect" class="sr-only">Sort by:</label>
+                  <select id="sortBySelect" class="sort-select">
+                    <option value="featured">Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="rating">Customer Rating</option>
+                    <option value="newest">Newest Arrivals</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Products Grid -->
+              <div class="products-grid" id="catalogProductsGrid">
+                <!-- Injected dynamically -->
+              </div>
+
+              <!-- Numerical Pagination -->
+              <div class="pagination" id="catalogPagination">
+                <!-- Injected dynamically -->
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+    <!-- 🔬 VIEW 3: WHITE LABEL PORTAL & CONFIGURATOR -->
+    <div id="view-whitelabel" class="spa-view">
+      <!-- Hero -->
+      <section class="wl-hero section">
+        <div class="container wl-hero__inner">
+          <div class="wl-hero__content">
+            <span class="section__label">OEM/ODM Manufacturing</span>
+            <h1 class="section__title">Empowering Brands from<br/><em>Concept</em> to Market</h1>
+            <p class="wl-hero__desc">Since 1997, Millia Cosmetics has been the trusted white-label manufacturing partner for leading beauty brands in the UAE. We offer advanced R&D, premium ingredient sourcing, packaging design, and regulatory compliance.</p>
+            <div class="wl-badges">
+              <div class="wl-badge">🏢 <strong>UAE Facility</strong><br/><small>Sharjah Industrial Area</small></div>
+              <div class="wl-badge">🧬 <strong>Custom R&D</strong><br/><small>Tailored Formulations</small></div>
+              <div class="wl-badge">✓ <strong>GMP Certified</strong><br/><small>International Standards</small></div>
+            </div>
+          </div>
+          <div class="wl-hero__video">
+            <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80" alt="Cosmetic white-label production line" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Configurator Application -->
+      <section class="wl-configurator section" id="configurator-section">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__label">Live Customizer</span>
+            <h2 class="section__title">Estimate Your <em>Product Quote</em></h2>
+            <p class="section__desc">Select your options below to get a real-time, wholesale price estimate for your custom cosmetic product.</p>
+          </div>
+          
+          <div class="config-layout">
+            <!-- Customizer selections -->
+            <div class="config-controls">
+              
+              <!-- 1. Category -->
+              <div class="config-group">
+                <h3>1. Select Product Category</h3>
+                <div class="config-options-grid">
+                  <label class="config-card">
+                    <input type="radio" name="config-category" value="serum" checked />
+                    <span class="config-card__inner">
+                      <span class="config-card__icon">🧪</span>
+                      <strong>Facial Serum</strong>
+                      <small>Moisturizers, anti-aging, vitamin drops</small>
+                    </span>
+                  </label>
+                  <label class="config-card">
+                    <input type="radio" name="config-category" value="cream" />
+                    <span class="config-card__inner">
+                      <span class="config-card__icon">🧴</span>
+                      <strong>Moisturizer</strong>
+                      <small>Rich night creams, daily face gels</small>
+                    </span>
+                  </label>
+                  <label class="config-card">
+                    <input type="radio" name="config-category" value="cleanser" />
+                    <span class="config-card__inner">
+                      <span class="config-card__icon">🧼</span>
+                      <strong>Cleanser</strong>
+                      <small>Foaming face washes, milk cleansers</small>
+                    </span>
+                  </label>
+                  <label class="config-card">
+                    <input type="radio" name="config-category" value="lipstick" />
+                    <span class="config-card__inner">
+                      <span class="config-card__icon">💄</span>
+                      <strong>Matte Lipstick</strong>
+                      <small>Liquid lipsticks, velvet lip sticks</small>
+                    </span>
+                  </label>
+                  <label class="config-card">
+                    <input type="radio" name="config-category" value="perfume" />
+                    <span class="config-card__inner">
+                      <span class="config-card__icon">💨</span>
+                      <strong>Eau de Parfum</strong>
+                      <small>Oud blends, luxury oil concentrates</small>
+                    </span>
+                  </label>
+                  <label class="config-card">
+                    <input type="radio" name="config-category" value="scrub" />
+                    <span class="config-card__inner">
+                      <span class="config-card__icon">🧂</span>
+                      <strong>Body Scrub</strong>
+                      <small>Dead sea salts, organic sugar base</small>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- 2. Formulation -->
+              <div class="config-group">
+                <h3>2. Formulation Quality</h3>
+                <div class="config-options-list">
+                  <label class="config-list-item">
+                    <input type="radio" name="config-formula" value="standard" checked />
+                    <span class="config-list-item__inner">
+                      <strong>Standard Botanical Formulation</strong>
+                      <p>Premium plant-based extracts, gentle, cruelty-free, and paraben-free base.</p>
+                    </span>
+                  </label>
+                  <label class="config-list-item">
+                    <input type="radio" name="config-formula" value="organic" />
+                    <span class="config-list-item__inner">
+                      <strong>100% Organic & Vegan (+25%)</strong>
+                      <p>Sourced with fully certified organic materials, vegan wax, and cold-pressed oils.</p>
+                    </span>
+                  </label>
+                  <label class="config-list-item">
+                    <input type="radio" name="config-formula" value="clinical" />
+                    <span class="config-list-item__inner">
+                      <strong>Clinical Active Formula (+40%)</strong>
+                      <p>High concentration of actives (e.g. Retinol, Niacinamide, Vitamin C, Salicylic Acid).</p>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- 3. Packaging -->
+              <div class="config-group">
+                <h3>3. Packaging Styling</h3>
+                <div class="config-options-grid">
+                  <label class="config-card">
+                    <input type="radio" name="config-pack" value="standard" checked />
+                    <span class="config-card__inner">
+                      <strong>Standard Bottle / Tube</strong>
+                      <small>Squeeze plastic tube or standard white PET jar</small>
+                    </span>
+                  </label>
+                  <label class="config-card">
+                    <input type="radio" name="config-pack" value="glass" />
+                    <span class="config-card__inner">
+                      <strong>Luxury Amber Glass (+AED 2.2)</strong>
+                      <small>Amber pharmaceutical glass bottle with high-grade dropper</small>
+                    </span>
+                  </label>
+                  <label class="config-card">
+                    <input type="radio" name="config-pack" value="bamboo" />
+                    <span class="config-card__inner">
+                      <strong>Bamboo Eco Wrap (+AED 3.5)</strong>
+                      <small>Real sustainable wood/bamboo wrapping over glass interior</small>
+                    </span>
+                  </label>
+                  <label class="config-card">
+                    <input type="radio" name="config-pack" value="matte" />
+                    <span class="config-card__inner">
+                      <strong>Soft-Touch Matte (+AED 1.8)</strong>
+                      <small>Frosted minimal bottle with matching premium pump</small>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- 4. Quantity -->
+              <div class="config-group">
+                <h3>4. Order Quantity (MOQ: 1,000 units)</h3>
+                <div class="config-quantity-selector">
+                  <input type="range" id="config-quantity-slider" min="1000" max="50000" value="5000" step="500" />
+                  <div class="qty-inputs">
+                    <label for="config-quantity-num" class="sr-only">Quantity Units</label>
+                    <input type="number" id="config-quantity-num" min="1000" value="5000" />
+                    <span>Units</span>
+                  </div>
+                  <small class="volume-hint">💡 Volume discounts apply: 12% off at 5k, 20% off at 10k, 30% off at 50k units.</small>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Price Summary Panel -->
+            <div class="config-summary" id="configSummaryCard">
+              <div class="summary-card__header">
+                <h4>Estimate Details</h4>
+                <span class="live-tag">LIVE QUOTE</span>
+              </div>
+              <div class="summary-card__body">
+                <div class="summary-line">
+                  <span>Product Type:</span>
+                  <strong id="summary-category">-</strong>
+                </div>
+                <div class="summary-line">
+                  <span>Formulation:</span>
+                  <strong id="summary-formula">-</strong>
+                </div>
+                <div class="summary-line">
+                  <span>Packaging:</span>
+                  <strong id="summary-packaging">-</strong>
+                </div>
+                <div class="summary-line">
+                  <span>Quantity:</span>
+                  <strong id="summary-qty">0 units</strong>
+                </div>
+                <hr class="summary-divider"/>
+                <div class="summary-price-box">
+                  <div class="price-row">
+                    <span>Est. Cost Per Unit:</span>
+                    <span class="price-large" id="summary-unit-cost">AED 0.00</span>
+                  </div>
+                  <div class="price-row">
+                    <span>Est. Total Wholesale:</span>
+                    <span class="price-total" id="summary-total-cost">AED 0.00</span>
+                  </div>
+                </div>
+                <div class="vat-note">Prices are in UAE Dirhams (AED) and exclude VAT & shipping.</div>
+              </div>
+              <button class="btn btn--primary btn--full" id="configSubmitBtn">Transfer Config to Inquiry Form</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+    <!-- 📖 VIEW 4: OUR STORY / ABOUT -->
+    <div id="view-about" class="spa-view">
+      <section class="about-page section">
+        <div class="container">
+          <div class="about-page__grid">
+            <div class="about-page__media">
+              <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=700&q=80" alt="Millia story" class="story-img-main" />
+              <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=400&q=80" alt="Factory formulation" class="story-img-sub" />
+            </div>
+            <div class="about-page__content">
+              <span class="section__label">UAE Pioneers Since 1997</span>
+              <h2 class="section__title">Strengthening Leadership in Beauty</h2>
+              <p class="about-page__text"><strong>MILLIA COSMETICS IS A GROUP OF COMPANIES THAT HAS BEEN ESTABLISHED IN THE UNITED ARAB EMIRATES SINCE 23RD OF APRIL 1997.</strong> Over the years, we have strengthened our leadership position in the region through innovative marketing strategies, sound partnerships, and a high standard of ethics, well supported by a highly trained team, a reliable distribution system, and professional after-sales service.</p>
+              <p class="about-page__text">Our retail division manages convenient cosmetic branches stocked with thousands of beauty essentials, serving skincare enthusiasts across the Emirates. Concurrently, our manufacturing division collaborates with entrepreneurs to formulate and package private label cosmetics that meet strict global standards.</p>
+              <div class="about-page__values">
+                <div class="value-item">
+                  <h4>Ethical Innovation</h4>
+                  <p>All formulations are created with high-grade, skin-friendly botanical ingredients that are 100% cruelty-free.</p>
+                </div>
+                <div class="value-item">
+                  <h4>Local Manufacturing</h4>
+                  <p>We boast a locally operated Sharjah industrial factory, reducing shipping carbon footprint and expediting production for brands.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+    <!-- 📍 VIEW 5: OUR BRANCHES -->
+    <div id="view-branches" class="spa-view">
+      <section class="branches-section section">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__label">Locations</span>
+            <h2 class="section__title">Our <em>UAE Branches</em></h2>
+            <p class="section__desc">Visit any of our retail branches to explore the collections, consult with beauty advisors, and test formulas.</p>
+          </div>
+          
+          <!-- Filters for branches -->
+          <div class="branches-filters">
+            <button class="branch-filter-btn active" data-emirate="All">All UAE</button>
+            <button class="branch-filter-btn" data-emirate="Sharjah">Sharjah</button>
+            <button class="branch-filter-btn" data-emirate="Dubai">Dubai</button>
+            <button class="branch-filter-btn" data-emirate="Abu Dhabi">Abu Dhabi</button>
+            <button class="branch-filter-btn" data-emirate="Ajman">Ajman</button>
+            <button class="branch-filter-btn" data-emirate="Fujairah">Fujairah</button>
+          </div>
+
+          <div class="branches-grid" id="branchesContainer">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- ═══ BENEFITS FOOTER BANNER ═══ -->
+  <section class="benefits-banner">
+    <div class="container benefits-banner__grid">
+      <div class="benefit-item">
+        <span class="benefit-icon">🚚</span>
+        <strong>Free UAE Shipping</strong>
+        <p>Orders over AED 200</p>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon">✓</span>
+        <strong>Authentic & Cruelty Free</strong>
+        <p>100% guaranteed quality</p>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon">🔒</span>
+        <strong>Secure Local Payments</strong>
+        <p>Credit Card, Apple Pay, COD</p>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon">🏭</span>
+        <strong>Est. 1997</strong>
+        <p>28+ years UAE leadership</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TESTIMONIALS SLIDER ═══ -->
+  <section class="testimonials section" id="testimonials-section">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">Reviews</span>
+        <h2 class="section__title">Why Brands & Customers Trust Us</h2>
+      </div>
+      <div class="testimonials__slider" id="testimonialsSlider">
+        <!-- Injected by JS -->
+      </div>
+      <div class="testimonials__nav">
+        <button class="testi-nav__btn" id="testiPrev" aria-label="Previous">‹</button>
+        <span class="testi-nav__counter" id="testiCounter">1 / 4</span>
+        <button class="testi-nav__btn" id="testiNext" aria-label="Next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT SECTION ═══ -->
+  <section class="contact section" id="contact-section">
+    <div class="container contact__inner">
+      <div class="contact__info">
+        <span class="section__label">Get In Touch</span>
+        <h2 class="section__title">Let's Create Something<br/><em>Beautiful</em></h2>
+        <p>Whether you're looking for the perfect retail beauty product or you're an entrepreneur ready to launch your own cosmetic brand with Millia OEM/ODM, we're here to guide you.</p>
+        <div class="contact__details">
+          <div class="contact-card-detail">
+            <span class="det-icon">📍</span>
+            <div><strong>Location</strong><br/>Sharjah, United Arab Emirates</div>
+          </div>
+          <div class="contact-card-detail">
+            <span class="det-icon">📞</span>
+            <div><strong>Phone</strong><br/><a href="tel:+971501759587">+971 50 175 9587</a></div>
+          </div>
+          <div class="contact-card-detail">
+            <span class="det-icon">✉</span>
+            <div><strong>Email</strong><br/><a href="mailto:info@milliacosmetics.com">info@milliacosmetics.com</a></div>
+          </div>
+        </div>
+      </div>
+      
+      <form class="contact__form" id="contactForm">
+        <h3 class="form-title">Inquiry Details</h3>
+        <div class="form__row">
+          <div class="form__group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="First Name" required />
+          </div>
+          <div class="form__group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required />
+          </div>
+        </div>
+        <div class="form__group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form__group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+971 50 000 0000" />
+        </div>
+        <div class="form__group">
+          <label for="interest">I'm interested in</label>
+          <select id="interest" name="interest">
+            <option value="retail">Shopping Retail Products</option>
+            <option value="whitelabel">White-Label OEM Manufacturing</option>
+            <option value="partnership">Partnership Opportunities</option>
+            <option value="other">Other Inquiry</option>
+          </select>
+        </div>
+        <div class="form__group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help you..."></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full" id="contactSubmitBtn">Get Started</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="/millia-logo.webp" alt="Millia Cosmetics" class="footer__logo" />
+        <p>Premium beauty products and state-of-the-art white-label manufacturing. Trusted since 1997 across the Middle East.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Shop Categories</h4>
+        <ul>
+          <li><a href="#shop">Skincare</a></li>
+          <li><a href="#shop">Makeup</a></li>
+          <li><a href="#shop">Haircare</a></li>
+          <li><a href="#shop">Fragrance</a></li>
+          <li><a href="#shop">Body Care</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Corporate</h4>
+        <ul>
+          <li><a href="#whitelabel">OEM Manufacturing</a></li>
+          <li><a href="#whitelabel#configurator-section">Quote Calculator</a></li>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#branches">Retail Branches</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Stay Connected</h4>
+        <p class="footer__newsletter-text">Join the Millia newsletter for exclusive beauty launches.</p>
+        <form class="footer__newsletter" id="newsletterForm">
+          <input type="email" placeholder="your@email.com" required aria-label="Newsletter email" />
+          <button class="btn btn--primary btn--sm" type="submit">→</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>© 2026 Millia Cosmetics. All rights reserved. Registered under Sharjah chamber of commerce.</p>
+      <div class="footer__socials">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ═══ OVERLAYS & MODALS ═══ -->
+
+  <!-- 1. Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-overlay__header">
+      <div class="container header-search-inner">
+        <span class="search-icon-large">🔍</span>
+        <input type="text" id="searchInput" placeholder="Search 100+ premium cosmetics by name, ingredient, type..." autofocus />
+        <button class="close-search-btn" id="searchCloseBtn" aria-label="Close search">✕</button>
+      </div>
+    </div>
+    <div class="search-overlay__results container" id="searchResults">
+      <div class="search-initial-state">
+        <p>Type to search skincare, makeup, haircare, fragrances...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Slide-out Cart Drawer -->
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer__backdrop" id="cartBackdrop"></div>
+    <div class="cart-drawer__content">
+      <div class="cart-drawer__header">
+        <h3>Shopping Bag (<span id="cartCountHeader">0</span>)</h3>
+        <button class="cart-drawer__close" id="cartClose" aria-label="Close cart">✕</button>
+      </div>
+      
+      <!-- Free shipping progress -->
+      <div class="shipping-meter">
+        <p class="shipping-meter__text" id="shippingMeterText">Add <strong>AED 200.00</strong> more for FREE shipping in UAE</p>
+        <div class="shipping-meter__bar">
+          <div class="shipping-meter__progress" id="shippingMeterProgress" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <!-- Cart Lines -->
+      <div class="cart-drawer__items" id="cartDrawerItems">
+        <!-- Dynamic content -->
+      </div>
+
+      <!-- Cart Footer -->
+      <div class="cart-drawer__footer">
+        <div class="promo-wrap">
+          <input type="text" id="promoInput" placeholder="Promo code (e.g. WELCOME10)" />
+          <button class="btn btn--outline btn--sm" id="promoApplyBtn">Apply</button>
+        </div>
+        <div class="cart-totals">
+          <div class="totals-line">
+            <span>Subtotal:</span>
+            <span id="cartSubtotal">AED 0.00</span>
+          </div>
+          <div class="totals-line" id="discountRow" style="display:none">
+            <span>Discount (10%):</span>
+            <span id="cartDiscount">-AED 0.00</span>
+          </div>
+          <div class="totals-line">
+            <span>Shipping:</span>
+            <span id="cartShipping">AED 20.00</span>
+          </div>
+          <div class="totals-line">
+            <span>VAT (5%):</span>
+            <span id="cartVAT">AED 0.00</span>
+          </div>
+          <hr/>
+          <div class="totals-line total-line-final">
+            <span>Total:</span>
+            <strong id="cartTotal">AED 0.00</strong>
+          </div>
+        </div>
+        <button class="btn btn--primary btn--full checkout-btn" id="proceedToCheckoutBtn">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Product Quick View Modal -->
+  <div class="modal" id="quickViewModal">
+    <div class="modal__backdrop" id="quickViewBackdrop"></div>
+    <div class="modal__content modal__content--lg">
+      <button class="modal__close" id="quickViewClose" aria-label="Close quick view">✕</button>
+      <div class="quickview-layout" id="quickViewLayout">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. E-Commerce Checkout Modal -->
+  <div class="modal" id="checkoutModal">
+    <div class="modal__backdrop" id="checkoutBackdrop"></div>
+    <div class="modal__content">
+      <button class="modal__close" id="checkoutClose" aria-label="Close checkout">✕</button>
+      
+      <div class="checkout-layout">
+        <!-- Step Indicator -->
+        <div class="checkout-steps">
+          <div class="checkout-step active" id="chkStep1Indicator">1. Delivery</div>
+          <div class="checkout-step" id="chkStep2Indicator">2. Payment</div>
+          <div class="checkout-step" id="chkStep3Indicator">3. Done</div>
+        </div>
+
+        <form id="checkoutForm">
+          <!-- Step 1: Delivery Details -->
+          <div class="checkout-step-panel active" id="checkoutStep1Panel">
+            <h3>Delivery Details</h3>
+            <div class="form__group">
+              <label for="chkName">Full Name</label>
+              <input type="text" id="chkName" placeholder="Full Name" required />
+            </div>
+            <div class="form__group">
+              <label for="chkEmail">Email Address</label>
+              <input type="email" id="chkEmail" placeholder="you@example.com" required />
+            </div>
+            <div class="form__group">
+              <label for="chkPhone">Phone Number</label>
+              <input type="tel" id="chkPhone" placeholder="+971 50 123 4567" required />
+            </div>
+            <div class="form__row">
+              <div class="form__group">
+                <label for="chkEmirate">Emirate</label>
+                <select id="chkEmirate" required>
+                  <option value="Sharjah">Sharjah</option>
+                  <option value="Dubai">Dubai</option>
+                  <option value="Abu Dhabi">Abu Dhabi</option>
+                  <option value="Ajman">Ajman</option>
+                  <option value="Ras Al Khaimah">Ras Al Khaimah</option>
+                  <option value="Fujairah">Fujairah</option>
+                  <option value="Umm Al Quwain">Umm Al Quwain</option>
+                </select>
+              </div>
+              <div class="form__group">
+                <label for="chkCity">City / Area</label>
+                <input type="text" id="chkCity" placeholder="e.g. Al Nahda" required />
+              </div>
+            </div>
+            <div class="form__group">
+              <label for="chkAddress">Street Address</label>
+              <input type="text" id="chkAddress" placeholder="Building, Apartment, Street" required />
+            </div>
+            <button type="button" class="btn btn--primary btn--full mt-4" id="checkoutStep1Next">Continue to Payment</button>
+          </div>
+
+          <!-- Step 2: Payment Details -->
+          <div class="checkout-step-panel" id="checkoutStep2Panel">
+            <h3>Payment Method</h3>
+            <div class="payment-tabs">
+              <button type="button" class="payment-tab active" data-method="card">💳 Card</button>
+              <button type="button" class="payment-tab" data-method="apple"> Apple Pay</button>
+              <button type="button" class="payment-tab" data-method="cod">💵 Cash on Delivery</button>
+            </div>
+
+            <!-- Card Form inputs -->
+            <div class="payment-details-form" id="cardPaymentDetails">
+              <div class="form__group">
+                <label for="cardNum">Card Number</label>
+                <input type="text" id="cardNum" placeholder="4000 1234 5678 9010" />
+              </div>
+              <div class="form__row">
+                <div class="form__group">
+                  <label for="cardExpiry">Expiry Date</label>
+                  <input type="text" id="cardExpiry" placeholder="MM/YY" />
+                </div>
+                <div class="form__group">
+                  <label for="cardCVV">CVV</label>
+                  <input type="password" id="cardCVV" placeholder="123" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Apple Pay indicator -->
+            <div class="payment-details-form" id="applePaymentDetails" style="display:none">
+              <div class="apple-pay-box">
+                <p>Use your Apple ID profile and stored cards to complete checkout securely.</p>
+                <button type="button" class="apple-pay-mock-btn">Pay with Pay</button>
+              </div>
+            </div>
+
+            <!-- COD indicator -->
+            <div class="payment-details-form" id="codPaymentDetails" style="display:none">
+              <p class="cod-box-text">📦 Cash on Delivery: Pay AED 10 surcharge on delivery. Please have the exact amount ready upon delivery.</p>
+            </div>
+
+            <div class="form-navigation mt-4">
+              <button type="button" class="btn btn--outline" id="checkoutStep2Back">Back</button>
+              <button type="submit" class="btn btn--primary" id="checkoutStep2Submit">Complete Order</button>
+            </div>
+          </div>
+        </form>
+
+        <!-- Step 3: Success Screen -->
+        <div class="checkout-step-panel text-center" id="checkoutStep3Panel">
+          <div class="success-icon">✓</div>
+          <h2>Thank You For Your Order!</h2>
+          <p class="success-subtitle">Your order has been placed successfully and is being prepared in our facility.</p>
+          <div class="order-summary-box">
+            <p>Order Number: <strong id="successOrderNumber">#MC-84920</strong></p>
+            <p>Estimated Delivery: <strong>1-2 Business Days (UAE Express)</strong></p>
+            <p>Receipt sent to: <span id="successEmailText">customer@mail.com</span></p>
+          </div>
+          <button class="btn btn--primary btn--full mt-4" id="successCloseBtn">Continue Shopping</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
